@@ -10,7 +10,9 @@ function App() {
   const [columns, setColumns] = useState(0);
 
   const handleIncrementRow = () => {
-    setRows(rows + 1);
+    if (rows < 9) {
+      setRows(rows + 1);
+    }
   };
 
   const handleDecrementRow = () => {
